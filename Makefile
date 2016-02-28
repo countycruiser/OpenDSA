@@ -268,6 +268,9 @@ testcpp: min
 uwosh: min
 	python $(CONFIG_SCRIPT) config/uwosh.json
 
+MinEditDistance: min
+	python $(CONFIG_SCRIPT) config/MinEditDistance.json --local
+
 PL: min
 	python $(CONFIG_SCRIPT) config/PL.json
 
