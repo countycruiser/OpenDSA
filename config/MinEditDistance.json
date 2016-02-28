@@ -27,6 +27,24 @@
             "long_name": "Introduction",
             "sections": {}
             }
+        },
+    "The Basics": {
+        "Development/MinEditDistance_Ch1": {
+            "long_name": "The Basics",
+            "sections": {}
+            }
+        },
+    "Levenshtein’s Edit Distance Algorithm Setup": {
+        "Development/MinEditDistance_Ch2": {
+            "long_name": "The Basics",
+            "sections": {}
+            }
+        },
+    "Running through the Algorithm": {
+        "Development/MinEditDistance_Ch3": {
+            "long_name": "The Basics",
+            "sections": {}
+            }
         }
     }
 }
