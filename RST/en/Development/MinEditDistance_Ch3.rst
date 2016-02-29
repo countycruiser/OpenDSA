@@ -11,6 +11,6 @@ Section Title
 This example shows how to embed a Khan Academy exercise that has the user identify the
 maximum by clicking on a JSAV array cell.
 
-.. avembed:: Exercises/Development/Cs342_uwosh_ex3.html ka
+.. avembed:: Exercises/Development/MinEditDistance_Q1.html ka
 
 .. odsascript:: AV/Development/MinEditDistance_Ch0_1.js
