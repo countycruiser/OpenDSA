@@ -4,19 +4,27 @@ $(document).ready(function () {
 
     JSAV.init();
     var av = new JSAV("MinEditDistance_Ch2_1");
-    var theArray = [20, 30, 44, 54, 55, 11, 78, 14, 13, 79, 12, 98];
-    var arr = av.ds.array(theArray, {indexed: true});
-    av.umsg("Text before displayInit()");
+    var cathat = [['C','','',''],['A','','',''],['T','','',''],['','H','A','T']];
+    var mx_cathat = av.ds.matrix(cathat);
+    av.umsg("This is the style of how to setup a matrix for this algorithm for the words CAT and HAT.");
     // Note: av.displayInit() will not affect the number of slides.
     // All that it will do is affect what you get to see on the
     // initial slide.
     av.displayInit();
     // We are now starting a new slide (#2)
-    av.umsg("... and text after displayInit()", {preserve: true});
-    arr.swap(3,7);
+    av.umsg("Notice CAT is along the left hand column");
+    mx_cathat.highlight(0,0);
+    mx_cathat.highlight(1,0);
+    mx_cathat.highlight(2,0);
     av.step();
     // We are now starting a new slide (#3)
-    av.umsg("Text after av.step()");
+    av.umsg("And that HAT is along the bottom row");
+    mx_cathat.unhighlight(0,0);
+    mx_cathat.unhighlight(1,0);
+    mx_cathat.unhighlight(2,0);
+    mx_cathat.highlight(3,1);
+    mx_cathat.highlight(3,2);
+    mx_cathat.highlight(3,3);
     av.recorded();
     // If you add av.umsg after av.recorded, it will add new slides in
     // ways that you probably do not expect and probably cannot
