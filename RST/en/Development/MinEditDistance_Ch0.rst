@@ -3,7 +3,7 @@
 .. Copyright (c) 2012-13 by the OpenDSA Project Contributors, and
 .. distributed under an MIT open source license.
 .. avmetadata::
-:author: Sam Weinkauf, Max
+:author: Sam Weinkauf, Max Beauchemin, Shaina Bathke
 
 For our algorithm we were assigned the topic of Artificial Intelligence or AI. Within this topic we selected the Minimum Edit Distance algorithm, created by Levenshtein.
 

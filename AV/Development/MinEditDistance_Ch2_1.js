@@ -4,25 +4,25 @@ $(document).ready(function () {
 
     JSAV.init();
     var av = new JSAV("MinEditDistance_Ch2_1");
-    var theArray = [20, 30, 44, 54, 55, 11, 78, 14, 13, 79, 12, 98];
-    var arr = av.ds.array(theArray, {indexed: true});
-    av.umsg("Text before displayInit()");
-    // Note: av.displayInit() will not affect the number of slides.
-    // All that it will do is affect what you get to see on the
-    // initial slide.
+    var table = av.ds.matrix([["T", , , , , , ], ["A", , , , , , ], ["C", , , , , , ], ["#", , , , , , ], [ , "#", "O", "R", "C", "A", ]]);
+    // Begin Slide 1
+    av.umsg("The height of the table should be the number of letters in our starting word plus one for the empty string (no letters). We use \"#\" to denote the empty string. In this example, the height of the table is 4 (not including the labels).", {preserve: true});
+    table.highlight(0,0);
+    table.highlight(1,0);
+    table.highlight(2,0);
+    table.highlight(3,0);
     av.displayInit();
-    // We are now starting a new slide (#2)
-    av.umsg("... and text after displayInit()", {preserve: true});
-    arr.swap(3,7);
     av.step();
-    // We are now starting a new slide (#3)
-    av.umsg("Text after av.step()");
-    av.recorded();
-    // If you add av.umsg after av.recorded, it will add new slides in
-    // ways that you probably do not expect and probably cannot
-    // control in the way that you want. As av.recorded() rewinds the
-    // slideshow, the new slides would go to the beginning of the slideshow.
-    // So, unless you are trying to add slides on-the-fly
-    // interactively, you don’t want to do this.
-    // av.umsg("Text after av.recorded()");
+    // Begin Slide 2
+    av.umsg("Similarly, the width should be the number of letters in our goal word plus one for the empty string. In this example, the width of the table is 5 (not including the labels).");
+    table.unhighlight(0,0);
+    table.unhighlight(1,0);
+    table.unhighlight(2,0);
+    table.unhighlight(3,0);
+    table.highlight(4,1);
+    table.highlight(4,2);
+    table.highlight(4,3);
+    table.highlight(4,4);
+    table.highlight(4,5);
+    av.recorded()
 });

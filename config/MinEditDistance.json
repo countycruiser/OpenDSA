@@ -22,13 +22,13 @@
             "sections": {}
         }
     },
-    "Introduction": {
+	"Introduction": {
         "Development/MinEditDistance_Ch0": {
             "long_name": "Introduction",
             "sections": {}
             }
         },
-    "The Basics": {
+	"The Basics": {
         "Development/MinEditDistance_Ch1": {
             "long_name": "The Basics",
             "sections": {}
