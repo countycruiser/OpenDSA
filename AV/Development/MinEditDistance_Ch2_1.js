@@ -26,3 +26,4 @@ $(document).ready(function () {
     table.highlight(4,5);
     av.recorded()
 });
+

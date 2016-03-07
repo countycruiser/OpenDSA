@@ -5,17 +5,17 @@ $(document).ready(function () {
     JSAV.init();
     var av = new JSAV("MinEditDistance_Ch0_1");
     var wordOne = ['k','i','t','t','e','n',''];
-    var wordTwo = ['s','i','t','t','i','n','g'];
+    var wordTwo = ['f','i','t','t','i','n','g'];
     var arr_w1 = av.ds.array(wordOne);
     var arr_w2 = av.ds.array(wordTwo);
-    av.umsg("Take the words Kitten and Sitting for example");
+    av.umsg("Take the words Kitten and Fitting for example");
     // Note: av.displayInit() will not affect the number of slides.
     // All that it will do is affect what you get to see on the
     // initial slide.
     av.displayInit();
     // We are now starting a new slide (#2)
-    av.umsg("The way minimum edit distance works, it would start by substituting K for S");
-    arr_w1.value(0,'s');
+    av.umsg("The way minimum edit distance works, it would start by substituting k for f");
+    arr_w1.value(0,'f');
     arr_w1.highlight(0);
     arr_w2.highlight(0);
     av.step();
@@ -34,7 +34,7 @@ $(document).ready(function () {
     arr_w1.highlight(6);
     arr_w2.highlight(6);
     av.step();
-    av.umsg("This would count as a minimum edit distance of 3 from kitten to sitting since we made 3 modifications: K->S, i->e, and adding g at the end.");
+    av.umsg("This would count as a minimum edit distance of 3 from kitten to fitting since we made 3 modifications: k->f, i->e, and adding g at the end.");
     arr_w1.unhighlight(6);
     arr_w2.unhighlight(6);
     
