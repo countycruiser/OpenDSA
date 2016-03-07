@@ -19,9 +19,9 @@ $(document).ready(function () {
     av.step();
     // We are now starting a new slide (#3)
     av.umsg("And that ORCA is along the bottom row");
+    mx_cathat.unhighlight(0,0);
     mx_cathat.unhighlight(1,0);
     mx_cathat.unhighlight(2,0);
-    mx_cathat.unhighlight(3,0);
     mx_cathat.highlight(4,2);
     mx_cathat.highlight(4,3);
     mx_cathat.highlight(4,4);
