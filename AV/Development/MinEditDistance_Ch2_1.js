@@ -26,6 +26,17 @@ $(document).ready(function () {
     mx_cathat.highlight(4,3);
     mx_cathat.highlight(4,4);
     mx_cathat.highlight(4,5);
+    
+    av.step();
+    
+    av.umsg("The height of the table should be the number of letters in our starting word plus one for an empty string (no letters). In this example, the height of the table is 4. Similarly, the width should be the number of letters in our goal word plus one for the empty string. In this example, the width of the table is 5. We use “#” to denote the empty string.");
+    mx_cathat.unhighlight(4,2);
+    mx_cathat.unhighlight(4,3);
+    mx_cathat.unhighlight(4,4);
+    mx_cathat.unhighlight(4,5);
+    mx_cathat.highlight(3,0);
+    mx_cathat.highlight(4,1);
+    
     av.recorded();
     // If you add av.umsg after av.recorded, it will add new slides in
     // ways that you probably do not expect and probably cannot
