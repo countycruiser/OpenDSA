@@ -6,12 +6,31 @@
 :author: Sam Weinkauf, Max, Shaina
 
 ==============================
-Section Title
+Creating the table
 ==============================
-Body content goes here just like this.
 
-
-.. inlineav:: MinEditDistance_Ch0_1 ss
+.. inlineav:: MinEditDistance_Ch2_1 ss
    :output: show
+   
+.. odsascript:: AV/Development/MinEditDistance_Ch2_1.js
 
-.. odsascript:: AV/Development/MinEditDistance_Ch0_1.js
+
+==============================
+Initializing the table
+==============================
+
+test
+
+
+==============================
+The steps
+==============================
+
+test
+
+
+==============================
+Putting it all together!
+==============================
+
+test

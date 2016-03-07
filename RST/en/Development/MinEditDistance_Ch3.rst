@@ -8,6 +8,7 @@
 ==============================
 Section Title
 ==============================
+
 This example shows how to embed a Khan Academy exercise that has the user identify the
 maximum by clicking on a JSAV array cell.
 

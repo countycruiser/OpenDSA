@@ -34,16 +34,24 @@
             "sections": {}
             }
         },
-    "Levenshtein’s Edit Distance Algorithm Setup": {
+    "Levenshtein’s Edit Distance Algorithm": {
         "Development/MinEditDistance_Ch2": {
-            "long_name": "The Basics",
+            "long_name": "Levenshtein’s Edit Distance Algorithm",
             "sections": {}
             }
         },
     "Running through the Algorithm": {
         "Development/MinEditDistance_Ch3": {
-            "long_name": "The Basics",
-            "sections": {}
+            "long_name": "Running through the Algorithm",
+            "sections": {
+                " MinEditDistance_Q1 ": {
+                    " long_name ": " KA Exercise Example with MC question ",
+                    " required ": true ,
+                    " points ": 1.0 ,
+                    " threshold ": 3.0 ,
+                    " showhide ": " Show "
+                    }
+                }
             }
         }
     }
