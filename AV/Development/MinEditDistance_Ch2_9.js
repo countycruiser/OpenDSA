@@ -37,7 +37,7 @@ $(document).ready(function () {
 	table.highlight(3,3);
 	av.step();
 	// Begin Slide 7
-	av.umsg("The cost for swapping two letters (\"C\" and \"O\") would be 3, since we add 2 to the cost from below and to the left.");
+	av.umsg("The cost for swapping two letters (\"C\" and \"R\") would be 3, since we add 2 to the cost from below and to the left.");
     table.unhighlight(3,3);
 	table.highlight(3,2);
 	av.step();
