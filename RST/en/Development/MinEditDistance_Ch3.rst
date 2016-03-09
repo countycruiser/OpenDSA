@@ -6,12 +6,17 @@
 :author: Sam Weinkauf, Max, Shaina
 
 ==============================
-Section Title
+Interactive Algorithm Visualization
 ==============================
 
-This example shows how to embed a Khan Academy exercise that has the user identify the
-maximum by clicking on a JSAV array cell.
+.. avembed:: AV/Development/MinEditEmbedded.html ss
+
+==============================
+Edit Distance Practice Exercise
+==============================
+
+For the following exercise, we will give you two words and ask you what the edit distance between them is. You should be able to trace the algorithm and select the correct answer from the options
 
 .. avembed:: Exercises/Development/MinEditDistance_Q1.html ka
 
-.. odsascript:: AV/Development/MinEditDistance_Ch0_1.js
+
