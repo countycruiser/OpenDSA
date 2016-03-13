@@ -9,23 +9,27 @@
   <body data-height="650" data-width="950">
     <div class="exercise">
       <div class="vars">
-        <var id="arrSize">Khan.randRange(4, 11)</var>
+        <var id="arrSize">2</var>
+        <var id="wordOneIndex">Khan.randRange(0,11)</var>
+          <var id="wordTwoIndex">Khan.randRange(0,11)</var>
 	<var id="lastIndex">arrSize - 1</var>
-        <var id="arrValues">MinEditDistance_Q1.initArr(arrSize)</var>
-        <var id="theAnswer">MinEditDistance_Q1.maxValue()</var>
-        <var id="option0">MinEditDistance_Q1.option[0]</var>
-        <var id="option1">MinEditDistance_Q1.option[1]</var>
-        <var id="option2">MinEditDistance_Q1.option[2]</var>
+        <var id="arrValues">MinEditDistance_Q1.initArr(arrSize,wordOneIndex,wordTwoIndex)</var>
+        <var id="theAnswer">MinEditDistance_Q1.answer(wordOneIndex,wordTwoIndex)</var>
+        <var id="option0">Khan.randRange(0 , 4)</var>
+        <var id="option1">Khan.randRange(4,8)</var>
+        <var id="option2">Khan.randRange(8 , 13)</var>
+          <var id="option3">Khan.randRange(13 , 20)</var>
       </div>
       <div class="problems">
         <div id="MinEditDistance_Q1p">
-          <p class="question">What is the largest value in this list of numbers? </p>
+          <p class="question">What is the Min Edit Distance between the two words listed? </p>
 	  <pre><var>arrValues</var></pre>
           <div class="solution"> <var>theAnswer</var></div>
 	  <ul class="choices">
 	    <li><var>option0</var></li>
 	    <li><var>option1</var></li>
 	    <li><var>option2</var></li>
+          <li><var>option3</var></li>
 	  </ul>
           <div class="hints">
             <p>Choose something between 0 and index <var>lastIndex</var> </p>

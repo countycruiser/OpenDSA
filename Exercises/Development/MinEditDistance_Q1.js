@@ -2,24 +2,18 @@
 (function() {
     "use strict";
     var my_array;
+    var words = ['EPISODE','ASSEMBLY','MARBLE','AIRSPACE','ADVANTAGE','RIVAL','CUBE','ANYBODY','CIVILIZATION','APPLE','BLAZE','COINCIDENCE'];
     
     var MinEditDistance_Q1 = {
 	
 	option: [0,0,0],
 
 	// Initialise the exercise
-	initArr: function(arr_size) {
+	initArr: function(arr_size,wordOneIndex,wordTwoIndex) {
 	    var i;
 	    var next_val;
 	    var array_str;
-	    my_array = [];
-	    for (i = 0; i < arr_size; i++) {
-		next_val = Math.floor(Math.random() * 1000 + 1);
-		while (my_array.includes(next_val))
-		    next_val = Math.floor(Math.random() * 1000 + 1);
-		my_array.push(next_val);
-		console.log(" " + next_val);
-	    }
+	    my_array = [words[wordOneIndex],words[wordTwoIndex]];
 	    array_str = "";
 	    for (i = 0; i < arr_size; i++) {
 		array_str = array_str + " " + my_array[i];
@@ -28,41 +22,87 @@
 	    return array_str;
 	},
 	
-	maxValue: function() {
-	    var i;
-	    var temp;
-	    var temp_index;
-	    // Get the largest in index 0
-	    for (i = 1; i < my_array.length; i++) {
-		if (my_array[i] > my_array[0]) {
-		    temp = my_array[0];
-		    my_array[0] = my_array[i];
-		    my_array[i] = temp;
-		}
-	    }
+	answer: function(wordOneIndex,wordTwoIndex) {
+        var a = words[wordOneIndex];
+        var b = words[wordTwoIndex];
+        if(a.length == 0)
+            return b.length;
 
-	    // The largest is now in index 0.
-	    // Get our three options in index 1, 2, 3
-	    temp_index = Math.floor(Math.random() * (my_array.length-1)) + 1;
-	    temp = my_array[1];
-	    my_array[1] = my_array[temp_index];
-	    my_array[temp_index] = temp;
+        if(b.length == 0)
+            return a.length;
 
-	    temp_index = Math.floor(Math.random() * (my_array.length-2)) + 2;
-	    temp = my_array[2];
-	    my_array[2] = my_array[temp_index];
-	    my_array[temp_index] = temp;
+        //Sanitize input
+        a = a.toUpperCase();
+        a = a.replace(" ","");
 
-	    temp_index = Math.floor(Math.random() * (my_array.length-3)) + 3;
-	    temp = my_array[3];
-	    my_array[3] = my_array[temp_index];
-	    my_array[temp_index] = temp;
+        b = b.toUpperCase();
+        b = b.replace(" ","");
 
-	    MinEditDistance_Q1.option[0] = my_array[1];
-	    MinEditDistance_Q1.option[1] = my_array[2];
-	    MinEditDistance_Q1.option[2] = my_array[3];
-	    return my_array[0];
-	},
+        var mx = [];
+
+        var i;
+        var j;
+       var arr;		
+
+        //Vertical Word
+        for(i = 1; i <= a.length; i++){
+            arr = [];
+            arr[0] = a.charAt(i-1);
+            for (j = 1; j <= b.length + 1; j++) {
+                arr[j] = '';
+            }
+            mx[a.length-i] = arr;
+        }
+
+        //# below vertical word
+        arr = [];
+        arr[0] = '#';
+        for (j = 1; j <= b.length + 1; j++) {
+                arr[j] = '';
+        }
+        mx[a.length] = arr;
+
+        //Horizontal Word
+        arr = [];
+        arr[0] = '';
+        arr[1] = '#'
+        for (j = 0; j < b.length; j++) {
+                arr[j+2] = b.charAt(j);
+        }
+        mx[a.length+1] = arr;
+
+
+        //Horizontal numbering
+        for (j = 0; j <= b.length; j++) {
+            mx[a.length][j+1] = j;
+        }
+
+        //Vertical numbering
+        for (i = 1; i <= a.length; i++) {
+            mx[a.length - i][1] = i;
+        }
+
+        var aIndex = 0;
+
+        for(i = a.length - 1; i >= 0; i--){
+            var aChar = a.charAt(aIndex);
+            aIndex++;
+            for (j = 2; j <=b.length + 1; j++) {
+                if(aChar == b.charAt(j-2)){
+                    mx[i][j] = mx[i+1][j-1];				
+                } else {
+                    mx[i][j] = Math.min(mx[i+1][j-1] + 2,
+                                  Math.min(mx[i+1][j] + 1, mx[i][j-1] + 1));				
+                }
+            }
+        }
+        
+        MinEditDistance_Q1 . option [0] = 1;
+        MinEditDistance_Q1 . option [1] = 2;
+        MinEditDistance_Q1 . option [2] = 3;
+        MinEditDistance_Q1 . option [3] = 4;
+        return mx[0][b.length + 1];
+    }
 
     };
 
