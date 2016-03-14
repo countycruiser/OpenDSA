@@ -34,7 +34,7 @@ $(document).ready(function () {
     arr_w1.highlight(6);
     arr_w2.highlight(6);
     av.step();
-    av.umsg("This would count as a minimum edit distance of 3 from kitten to fitting since we made 3 modifications: k->f, i->e, and adding g at the end.");
+    av.umsg("This would count as a minimum edit distance cost of 5 from kitten to fitting. Since we made the 3 modifications: k->f, i->e, and adding g at the end. Next, find out why our total cost is 5 when we only made 3 changes.");
     arr_w1.unhighlight(6);
     arr_w2.unhighlight(6);
     
